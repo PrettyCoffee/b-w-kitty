@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'Futura LT Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Futura LT Light'), url('FuturaLTLight.woff') format('woff');
+}
+
+html, body, #root {
+	height:100%;
+	width:100%;
+}
+body {
+	background-color: var(--bg-color);
+	color: var(--default-color);
+	overflow: hidden;
+	font-family: "Futura LT Light";
+}
+p {
+	margin:0px
+}
+a, a:visited, a:active {
+	color: var(--default-color);
+	text-decoration: none;
+}
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height:100%;
+	width:100%;
+	z-index: -1;
+}
+.main-wrapper > div {
+	position: relative;
+}
+
+/********************
+ * 	     Pic  		*
+ ********************/
+ .main-wrapper > div > img {
+	position: relative;
+	height: 550px;
+	width: 550px;
+	z-index: 100;
+}
+.main-wrapper > div > div.pic-cover {
+	position: absolute;
+	height: 550px;
+	width: 550px;
+	background-color: var(--bg-color);
+	opacity: 0.3;
+	z-index: 101;
+}
+
+
+/********************
+ * 	    text  		*
+ ********************/
+ .text {
+	 position: absolute;
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: center;
+	 width: 100%;
+
+	 top:-70px;
+ }
+
+ .text > h2 {
+	font-size: 20pt;
+	margin: 0px;
+	border: 1px solid var(--accent-color2);
+	border-radius: var(--border-radius);
+	padding: 0px 20px 0px 35px;
+	letter-spacing: 15px;
+ }
+/********************
+ * 	    time  		*
+ ********************/
+ .time {
+	position: absolute;
+	bottom:-80px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+}
+
+.time > h2 {
+	font-size: 30pt;
+	margin: 0px;
+	letter-spacing: 15px;
+
+	border: 1px solid var(--accent-color2);
+	border-radius: var(--border-radius);
+
+	padding: 0px 20px 0px 35px;
+	margin-top: 20px;
+ }
+/********************
+ * 	   Toastify		*
+ ********************/
+.Toastify__toast--dark{
+	border: 4px solid var(--accent-color);
+	border-radius: var(--border-radius);
+    background-color: var(--bg-color);
+}
+.Toastify__progress-bar--dark{
+    background: var(--accent-color2);
+}
+
+@media only screen and (max-height: 620px) and (min-width: 600px) {
+	.text{
+        display: none;
+	}
+	.main-wrapper{
+		justify-content: flex-start;
+		padding-top: 20px;
+	}
+}
+@media only screen and (max-height: 800px) {
+	.main-wrapper > div > img, .main-wrapper > div > div.pic-cover {
+		height: 450px;
+		width: 450px;
+	}
+}
+@media only screen and (max-width: 720px) {
+	.main-wrapper > div > img, .main-wrapper > div > div.pic-cover {
+		height: 450px;
+		width: 450px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.main-wrapper > div > img, .main-wrapper > div > div.pic-cover {
+		height: 370px;
+		width: 370px;
+	}
+}

@@ -1,0 +1,37 @@
+/********************
+ * 	   Dockbar		*
+ ********************/
+.dockbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+
+	position: absolute;
+	height: 100%;
+	left:0px;
+	top:0px;
+
+	z-index: 1;
+}
+.dockbar > a {
+	position: relative;
+	height:60px;
+}
+.dockbar > a > svg {
+	position: absolute;
+	width:70px!important;
+	font-size: 40px;
+	padding: 5px 10px 5px 10px;
+	border-radius: var(--border-radius) 0px 0px var(--border-radius);
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+	transition: .5s;
+	opacity: 0.5;
+	left:-20px;
+}
+.dockbar > a > svg:hover {
+	left:-70px;
+	opacity: 1;
+	padding: 5px 20px 5px 0px;
+}

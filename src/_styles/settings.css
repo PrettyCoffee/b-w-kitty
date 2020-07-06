@@ -1,0 +1,154 @@
+
+/********************
+ * 	   Settings		*
+ ********************/
+ .settings{
+	position: relative;
+    height: 0px;
+    z-index: 1000;
+}
+/* Settings Icon */
+.settings > svg{
+	position: absolute;
+	top: 20px;
+	right:-45px;
+	
+	padding: 10px 15px 10px 30px;
+	font-size: 20px;
+	border-radius: var(--border-radius);
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+	opacity: 0.3;
+	
+	cursor: pointer;
+	transition: .3s;
+}
+.settings > svg:hover{
+	opacity: 1;
+	right:-5px;
+	padding: 10px 30px 10px 15px;
+}
+
+/* Settings Window */
+.settings > div{
+	position: fixed;
+	top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    /*
+    background-color: var(--bg-color);
+    opacity: 0.95;
+    */
+}
+.settings > div > svg {
+    position:fixed;
+    top:10px;
+    right:20px;
+    font-size: 20pt;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: .3s;
+    z-index: 10;
+}
+.settings > div > svg:hover {
+    opacity: 1;
+}
+
+.settings > div > div.settings-cover {
+    position: fixed;
+	top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    background-color: var(--bg-color);
+    opacity: 0.95;
+    z-index: 1;
+}
+.settings > div > div.settings-section {
+    border-bottom: 1px solid var(--accent-color2);
+    width: 400px;
+    padding: 10px 0px 10px 0px;
+    z-index: 10;
+}
+.settings > div > div.settings-section:last-child {
+    border-bottom: none;
+}
+
+.settings > div > div.settings-section > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+}
+.settings > div > div.settings-section > div > label > input {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+
+/*Colorpicker*/
+.swatch {
+    padding: 5px;
+    background: var(--default-color);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s;
+    opacity:0.5;
+}
+.swatch:hover {
+    opacity:1;
+}
+.swatch > div {
+    width: 50px;
+    height: 18px;
+    border-radius: 2px;
+}
+.swatch > div.bg-color {
+    background: var(--bg-color);
+}
+.swatch > div.default-color {
+    background: var(--default-color);
+}
+.swatch > div.accent-color {
+    background: var(--accent-color);
+}
+.swatch > div.accent-color2 {
+    background: var(--accent-color2);
+}
+.popover {
+	position: fixed;
+	width: 40%;
+	left:30%;
+	top:20%;
+	z-Index: 100;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+.popover > .swatches-picker {
+	width: 100%!important;
+	height: 50%!important;
+}
+.popover > .cover {
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--bg-color);
+    opacity: 0.7;
+}

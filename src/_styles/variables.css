@@ -1,0 +1,7 @@
+:root {
+	--bg-color: rgba(46,46,46,1);
+	--default-color: rgba(230,230,230,1);
+	--accent-color: rgba(50,200,150,0.3);
+	--accent-color2: rgba(200, 50, 50, 0.3);
+	--border-radius: 5px;
+}
